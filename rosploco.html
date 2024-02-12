@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html><!-- By Microsoft and EthanMcBloxxer under the MIT License (see the end of this document) -->
+<!DOCTYPE html><!-- By Microsoft and EthanMcBloxxer under the MIT License (see the end of this document) -->
 <html lang="en" style="width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;">
 
 <head><meta charset="utf-8" /><title></title></head>
@@ -4234,29 +4234,29 @@
 			monaco.editor.defineTheme('vsLight', {base: 'vs'});
 			monaco.editor.defineTheme('vsDark', {base: 'vs-dark'});
 			
-			monaco.editor.defineTheme('studio', { // also synapse's theme
+            monaco.editor.defineTheme('azlyph', { // also synapse's theme
 				base: 'vs-dark',
 				inherit: true,
 				rules: [
-					{token: 'keyword', foreground: 'f86d7c', fontStyle: "bold"},
+                    { token: 'keyword', foreground: '777FE8', fontStyle: "bold"},
 					{token: 'global', foreground: '84d6f7', fontStyle: "bold"},
-					{token: 'type', foreground: '84d6f7'},
-					{token: 'string', foreground: 'adf195'},
-					{token: 'number', foreground: 'fcc600'},
+					{token: 'type', foreground: '656565'},
+                    { token: 'string', foreground: '656565'},
+                    { token: 'number', foreground: '979797'},
 					{token: 'operator', foreground: 'ffffff'},
-					{token: 'comment', foreground: '669966'},
+					{token: 'comment', foreground: '454545'},
 					{token: 'comment.todo', fontStyle: "bold"},
 				],
 				colors: {
-					'editor.background': '#252525',
+                    'editor.background': '#040404',
 					'editor.foreground': '#cccccc',
 				}
 			});
 
 			editor = monaco.editor.create(document.getElementById('container'), {
-				value: "-- Monaco (Microsoft) and Rosploco (EthanMcBloxxer) licensed under the MIT License.",
+				value: "--Welcome to Azlyph",
 				language: 'lua',
-				theme: "studio",
+				theme: "azlyph",
 				folding: true,
 				scrollbar: {
 					useShadows: false,
@@ -4327,7 +4327,9 @@
 			document.getElementsByClassName("margin")[0].style.backgroundImage = "url=(" + x + ")";
 		}
 
-		var switchMinimap = function (flag) {editor.updateOptions({minimap: {enabled: flag,}});}
+		var switchMinimapOn = function (flag) { editor.updateOptions({ minimap: { enabled: true, } }); }
+		var switchMinimapOff = function (flag) { editor.updateOptions({ minimap: { enabled: false, } }); }
+
 		var switchReadonly = function (flag) {editor.updateOptions({readOnly: flag,});}
 		var switchRenderWhitespace = function (op) {editor.updateOptions({renderWhitespace: op,});}
 		var switchLinks = function (flag) {editor.updateOptions({links: flag,});}
