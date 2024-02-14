@@ -1408,9 +1408,9 @@
 						"end)()",
 					].join("\n"),
 					insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet,
-				},
-				{
-					label: "while wait() do",
+                }, {
+                    label: "while wait() do",
+
 					kind: monaco.languages.CompletionItemKind.Snippet,
 					detail: "Loop",
 					documentation: {value: "Shorthand for\n\n```lua\ncoroutine.wrap(function()\n\twhile true do\n\t\twait()\n\tend\nend)()\n```\n\nalthough not using this is much more syntactically correct."},
